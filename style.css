@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    background-color: hsl(180, 72%, 80%);
+}
+
+.sidebar {
+    width: 220px;
+    background: hsl(0, 0%, 100%);
+    padding: 20px;
+    border-right: 1px solid #ccc;
+}
+
+ .sidebar h2{
+    color: hsl(0, 63%, 56%);
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 10px 0;
+    color:hsl(0, 0%, 33%);
+    cursor: pointer;
+}
+
+.sidebar ul li:hover {
+    color: hsl(233, 100%, 50%);
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 28px;
+    color: hsl(255, 25%, 52%);
+}
+
+.create-report {
+    background: hsl(197, 100%, 47%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.stat-box {
+    background: hsl(211, 100%, 95%);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1 1 200px;
+}
+
+.stat-box.dark {
+    background: hsl(240, 31%, 25%);
+    color: white;
+}
+
+.stat-box h3 {
+    color: hsl(241, 100%, 74%);
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.stat-box p {
+    font-size: 16px;
+}
+
+.task-manager {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.new-task {
+    background: #00acee;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: hsl(0, 0%, 94%);
+}
+
+th, td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid hsl(0, 0%, 87%);
+}
+
+.action {
+    cursor: pointer;
+    margin-right: 10px;
+}
+.edit-icon {
+    color: green;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+.delete-icon {
+    color: red;
+    cursor: pointer;
+  }
+
+/* Responsive */
+@media (max-width: 500px) {
+    .stats {
+        flex-direction:column;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .main-content {
+        margin: 0 auto;
+        padding: 10px;
+    }
+
+    .header {
+        flex-direction:column;
+        gap: 10px;
+    }
+}
